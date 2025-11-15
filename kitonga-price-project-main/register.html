@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account</title>
+  <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+
+  <div class="auth-container">
+    <img src="images/Kitonga-price.png" class="logo"/>
+
+    <div class="auth-box">
+      <h2>Create account</h2>
+
+      <label>Your name</label>
+      <input type="text" id="name" required>
+
+      <label>Mobile number or email</label>
+      <input type="text" id="regEmail" required>
+
+      <label>Password</label>
+      <input type="password" id="regPassword" required>
+      <small>Passwords must be at least 6 characters.</small>
+
+      <button class="auth-btn" onclick="register()">Continue</button>
+
+      <p class="below-text">
+        Already have an account?
+        <a href="login.html">Sign in</a>
+      </p>
+    </div>
+  </div>
+
+  <script src="auth.js"></script>
+</body>
+</html>

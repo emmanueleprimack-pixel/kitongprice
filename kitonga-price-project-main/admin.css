@@ -1,0 +1,71 @@
+body {
+  background: #f0f2f5;
+  font-family: Arial;
+}
+
+.dashboard {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 25px;
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+.logout-btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background: red;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+:root{--accent:#2b7a78;--accent2:#ffb703}
+*{box-sizing:border-box}
+body{font-family:Inter,system-ui,Arial;background:#f4f6f9;margin:0;color:#111}
+.container{max-width:1100px;margin:24px auto;padding:16px}
+header{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.header-actions button{margin-left:10px;padding:8px 12px;border-radius:6px;border:0;background:var(--accent);color:#fff;cursor:pointer}
+.top-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:18px}
+.stat{background:#fff;padding:12px;border-radius:8px;box-shadow:0 4px 12px rgba(2,6,23,0.06)}
+.stat-title{font-size:13px;color:#666}
+.stat-value{font-size:20px;font-weight:700;color:var(--accent)}
+.charts-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:18px}
+.chart-card{background:#fff;padding:12px;border-radius:8px;box-shadow:0 6px 18px rgba(2,6,23,0.06)}
+.admin-actions .card{background:#fff;padding:12px;border-radius:8px;box-shadow:0 6px 18px rgba(2,6,23,0.06);margin-bottom:10px}
+.admin-actions input{width:100%;padding:8px;margin:6px 0;border:1px solid #ddd;border-radius:6px}
+.admin-actions button{background:var(--accent2);border:0;padding:10px;border-radius:6px;color:#111;cursor:pointer}
+#shopRanking{margin-top:8px}
+#shopRanking .row{display:flex;justify-content:space-between;padding:8px 6px;border-bottom:1px dashed #eee}
+@media(max-width:900px){.charts-grid{grid-template-columns:1fr}.top-stats{grid-template-columns:repeat(2,1fr)}}

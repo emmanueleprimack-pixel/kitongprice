@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Online Shop</title>
+  <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+
+  <div class="auth-container">
+    <img src="images/Kitonga-price.png" class="logo"/>
+
+    <div class="auth-box">
+      <h2>Sign in</h2>
+
+      <label>Email or phone number</label>
+      <input type="text" id="email" required>
+
+      <label>Password</label>
+      <input type="password" id="password" required>
+
+      <button class="auth-btn" onclick="login()">Continue</button>
+
+      <p class="below-text">
+        By continuing, you agree to our 
+        <a href="#">Terms</a> and <a href="#">Privacy Notice</a>.
+      </p>
+
+      <hr class="line-break"/>
+
+      <p class="create-label">New to Online Shop?</p>
+      <a href="register.html">
+        <button class="new-acc-btn">Create your Online Shop account</button>
+      </a>
+    </div>
+  </div>
+
+  <script src="auth.js"></script>
+</body>
+</html>

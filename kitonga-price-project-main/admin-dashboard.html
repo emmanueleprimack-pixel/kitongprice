@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Admin Dashboard — Analytics</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="admin.css">
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- jsPDF for PDF export -->
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Admin Analytics</h1>
+      <div class="header-actions">
+        <button id="exportPdfBtn">Export Sales Report (PDF)</button>
+        <button onclick="logout()">Logout</button>
+      </div>
+    </header>
+
+    <section class="top-stats">
+      <div class="stat">
+        <div class="stat-title">Total Products Sold</div>
+        <div class="stat-value" id="totalSold">100</div>
+      </div>
+      <div class="stat">
+        <div class="stat-title">Total Revenue (Tsh)</div>
+        <div class="stat-value" id="totalRevenue">5.5M</div>
+      </div>
+      <div class="stat">
+        <div class="stat-title">Top Seller (Week)</div>
+        <div class="stat-value" id="topWeek">Manuu</div>
+      </div>
+      <div class="stat">
+        <div class="stat-title">Top Seller (Month)</div>
+        <div class="stat-value" id="topMonth">Manuu</div>
+      </div>
+    </section>
+
+    <section class="charts-grid">
+      <div class="chart-card">
+        <h3>Sales by Product (This Year)</h3>
+        <canvas id="productBarChart"></canvas>
+      </div>
+
+      <div class="chart-card">
+        <h3>Revenue by Month</h3>
+        <canvas id="revenueLineChart"></canvas>
+      </div>
+
+      <div class="chart-card">
+        <h3>Top Shops (By Sales)</h3>
+        <canvas id="shopPieChart"></canvas>
+      </div>
+    </section>
+
+    <section class="admin-actions">
+      <h2>Admin Tools</h2>
+      <div class="card">
+        <h4>Add Product</h4>
+        <form id="addProductForm">
+          <input id="pName" placeholder="Product name" required />
+          <input id="pPrice" type="number" placeholder="Price (Tsh)" required />
+          <input id="pVendor" placeholder="Shop/Vendor name" required />
+          <input id="pImage" placeholder="Image URL (optional)" />
+          <button type="submit">Add Product</button>
+        </form>
+      </div>
+
+      <div class="card">
+        <h4>Top Selling Shops</h4>
+        <div id="shopRanking"></div>
+      </div>
+
+      <div class="card">
+        <h4>Raw Data</h4>
+        <button id="clearDataBtn">Clear Orders & Products</button>
+      </div>
+    </section>
+  </div>
+
+  <script ></script>
+</body>
+</html>
